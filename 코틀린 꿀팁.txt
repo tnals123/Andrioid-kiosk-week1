@@ -1,0 +1,13 @@
+동적으로 색 바꾸기
+setTextColor((getApplication().getResources().getColor(R.color.black)))
+
+동적으로 텍스트 받아오기
+
+textview.text.toString()
+
+동적으로 레이아웃 만들기
+
+var textview = TextView(this)
+하고 params 정해주기
+
+이미지, 이름, 개수, 사이즈, 온도, 펄 추가, 얼음 추가, 가격
