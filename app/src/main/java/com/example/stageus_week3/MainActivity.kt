@@ -1,5 +1,6 @@
 package com.example.stageus_week3
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity(), datainterface {
         mybundle.putString("title", "메뉴 리스트로 이동!!!!!!!!!")
         fragment.arguments = mybundle
 
-        var fragment2 = menulist_frangment()
+        var fragment2 = conform_fragment()
         var mybundle2 = Bundle()
         mybundle2.putString("title", "메뉴 리스트로 이동!!!!!!!!!")
         fragment2.arguments = mybundle2
@@ -47,6 +48,15 @@ class MainActivity : AppCompatActivity(), datainterface {
     }
     override fun dataPass(data: String){
         Log.d("asdfasdf",data)
+    }
+
+    fun music_Start(){
+        var intent = Intent(this , Music_Service :: class.java)
+        startService(intent)
+    }
+    fun music_Stop(){
+        var intent = Intent(this , Music_Service :: class.java)
+        stopService(intent)
     }
 
 //    override fun onStart() {
