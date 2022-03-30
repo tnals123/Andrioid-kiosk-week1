@@ -3,6 +3,7 @@ package com.example.stageus_week3
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.text.Html
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
@@ -17,11 +18,15 @@ class Login_Page : AppCompatActivity() {
         var loginbutton = findViewById<Button>(R.id.login)
         var signupbutton = findViewById<Button>(R.id.resister)
 
+
+
         loginbutton.setOnClickListener() {
 
             var id = findViewById<EditText>(R.id.idedit).text.toString()
             var pw = findViewById<EditText>(R.id.pwedit).text.toString()
 
+            loginbutton.text = Html.fromHtml("<h2>Title</h2><br><p>"+pw+"</p>", Html.FROM_HTML_MODE_COMPACT)
+            Log.d("Asdfasdfasdfasdf",loginbutton.text.toString())
             //retrofit 실습 내용
             loginbutton.setOnClickListener() {}
             var retrofit = RetrofitClient.initRetrofit()
