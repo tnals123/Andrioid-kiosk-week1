@@ -10,6 +10,10 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import retrofit2.*
+import android.webkit.WebViewClient
+
+
+
 
 class Login_Page : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +23,8 @@ class Login_Page : AppCompatActivity() {
         webview.settings.javaScriptEnabled = true
         var weburl : String = "file:///android_asset/asdfasdf.html"
         webview.loadUrl(weburl)
+
+
 
     }
 }
